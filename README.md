@@ -14,8 +14,12 @@ List of compared models performing gesture recognition tasks:
 
 | Author  | Model | Gesture Type | Type of sign language | Accuracy |
 |------------- | ------------- | ------------- |  ------------- |  ------------- | 
-| Suharjito et al. [[1]](#1) | Content Cell  | ------------- |  ------------- |  ------------- |
-| Content Cell  | Content Cell  | ------------- |  ------------- |  ------------- |
+| Suharjito et al. [[1]](#1) | i3D Inception  | dynamic |  Argentinean |  100% |
+| Makarov et al. [[2]](#2) | QuadroConvPoolNet  | static |  American  |  about 100% |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
 
 ## 3.2. Model
 [ADD: details of final model - finally consisting of 15 convolutional layers and multiple other types of layers]
@@ -30,3 +34,4 @@ A detailed description of the used optimization methods
 
 ## References
 <a id="1">[1]</a> Suharjito, Suharjito & Gunawan, Herman & Thiracitta, Narada & Nugroho, Ariadi. (2018). Sign Language Recognition Using Modified Convolutional Neural Network Model. 1-5. 10.1109/INAPR.2018.8627014. 
+<a id="2">[2]</a> Makarov, Ilya & Veldyaykin, Nikolay & Chertkov, Maxim & Pokoev, Aleksei. (2019). American and russian sign language dactyl recognition. PETRA '19: Proceedings of the 12th ACM International Conference on PErvasive Technologies Related to Assistive Environments. 204-210. 10.1145/3316782.3316786. 
