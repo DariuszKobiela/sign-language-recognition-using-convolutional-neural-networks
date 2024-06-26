@@ -13,7 +13,7 @@ wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania 
 ### List of compared models performing gesture recognition tasks: 
 
 | Author  | Model | Gesture type | Sign language type | Accuracy |
-|------------- | ------------- | ------------- |  ------------- |  ------------- | ------------- | 
+|------------- | ------------- | ------------- |  ------------- |  ------------- | 
 | Suharjito et al. [[1]](#1) | i3D Inception  | dynamic |  Argentinean |  100% |
 | Makarov et al. [[2]](#2) | QuadroConvPoolNet  | static |  American  |  about 100% |
 | Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
@@ -24,7 +24,7 @@ wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania 
 ### List of the most frequently used datasets for training sign recognition models
 
 | Dataset  | Source | Gesture type | Sign language type | Number of gestures | Number of samples |
-|------------- | ------------- | ------------- |  ------------- |  ------------- | 
+|------------- | ------------- | ------------- |  ------------- |  ------------- | ------------- | 
 | MNIST | Kaggle [44]  | static |  American |  24 | 34,637 |
 | ASL Alphabet |Kaggle [45]  | static |  American  |  29 | 87,029 |
 | Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
