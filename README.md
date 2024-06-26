@@ -10,9 +10,9 @@ implementation of the mobile application.
 ## 2. Background and related work
 wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania rozpoznawania gestów oraz Wykaz najczęściej wykorzystywanych zbiorów danych do treningu modeli rozpoznających gesty). Dorzucić też podsummowanie przeglądu literatury (na co najmniej 2 strony - streszczenie przeglądu literatury z magisterki)
 
-List of compared models performing gesture recognition tasks: 
+### List of compared models performing gesture recognition tasks: 
 
-| Author  | Model | Gesture Type | Type of sign language | Accuracy |
+| Author  | Model | Gesture type | Sign language type | Accuracy |
 |------------- | ------------- | ------------- |  ------------- |  ------------- | 
 | Suharjito et al. [[1]](#1) | i3D Inception  | dynamic |  Argentinean |  100% |
 | Makarov et al. [[2]](#2) | QuadroConvPoolNet  | static |  American  |  about 100% |
@@ -20,6 +20,17 @@ List of compared models performing gesture recognition tasks:
 | Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
 | Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
 | Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
+
+### List of the most frequently used datasets for training sign recognition models
+
+| Dataset  | Source | Gesture type | Sign language type | Number of gestures | Number of samples |
+|------------- | ------------- | ------------- |  ------------- |  ------------- | 
+| MNIST | Kaggle [44]  | static |  American |  24 | 34,637 |
+| ASL Alphabet |Kaggle [45]  | static |  American  |  29 | 87,029 |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
+| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
 
 ## 3.2. Model
 [ADD: details of final model - finally consisting of 15 convolutional layers and multiple other types of layers]
