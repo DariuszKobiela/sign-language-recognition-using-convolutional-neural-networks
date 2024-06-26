@@ -46,7 +46,22 @@ A detailed description of the used optimization methods
 ### Network quantization
 Network quantization involves reducing the precision of parameters and intermediate activation maps that are typically stored in floating-point notation. Gholami et al. [[3]](#3) indicate that the first step is to define a quantization function that maps the real values of weights or activations to lower precision values. Usually, such a function maps these values to integer values, according to the following formula:
 
-$\sqrt{3x-1}+(1+x)^2$
+$Q(r)=Int(\frac{r}{S})$
+
+where: \
+Q(r) - quantization value\
+Int - integer value\
+r - real input value\
+S - scaling factor
+
+The above formula refers to symmetric quantization, where values are clipped using a symmetric range of values [-a, a]. Two main approaches in quantization can be distinguished: QAT (Quantization Aware Training) and PTQ (Post Training Quantization). In the first approach, quantization is performed during network training, where parameters are quantized after each gradient update. A major drawback, as indicated by the authors, is the computational cost of retraining the neural network. The second approach, PTQ, does not require retraining the network, as parameters are quantized after the network has been trained. It is a faster and simpler approach compared to QAT, but the model may suffer more in terms of detection accuracy.
+
+###  Knowledge Distillation
+Another approach of network optimization is Knowledge Distillation, which involves transferring information from a larger, more complex model to a less complex network. This method is often described in articles as a teacher-student format, where the teacher (the more complex network) imparts its knowledge to the student (the less complex network). Zhang et al. [2019] describe that the information flow is facilitated through a second (intermediate) network using data specifically labeled by the previous network. By utilizing synthetic data, the risk of overfitting the network is reduced, and very good function approximation is ensured. Moreover, this approach enables the compression and acceleration of complex networks.
+
+###  Layer Decomposition
+D
+
 
 ## References
 <a id="1">[1]</a> Suharjito, Suharjito & Gunawan, Herman & Thiracitta, Narada & Nugroho, Ariadi. (2018). Sign Language Recognition Using Modified Convolutional Neural Network Model. 1-5. 10.1109/INAPR.2018.8627014. 
