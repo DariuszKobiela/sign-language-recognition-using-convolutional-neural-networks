@@ -13,8 +13,8 @@ wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania 
 List of compared models performing gesture recognition tasks: 
 
 | Author  | Model | Gesture Type | Type of sign language | Accuracy |
-| Gunawan et al. [[1]](#1) | ------------- | ------------- |  ------------- |  ------------- |
-| Content Cell  | Content Cell  | ------------- |  ------------- |  ------------- |
+|------------- | ------------- | ------------- |  ------------- |  ------------- | 
+| Suharjito et al. [[1]](#1) | Content Cell  | ------------- |  ------------- |  ------------- |
 | Content Cell  | Content Cell  | ------------- |  ------------- |  ------------- |
 
 ## 3.2. Model
