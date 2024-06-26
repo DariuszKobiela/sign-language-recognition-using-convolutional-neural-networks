@@ -7,4 +7,7 @@ implementation of the mobile application.
 
 > Models source code and training scripts: https://github.com/adartemiuk/ASL_recognition_models
 
+## Background and related work
+wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania rozpoznawania gestów oraz Wykaz najczęściej wykorzystywanych zbiorów danych do treningu modeli rozpoznających gesty). Dorzucić też podsummowanie przeglądu literatury (na co najmniej 2 strony - streszczenie przeglądu literatury z magisterki)
+
 ## 
