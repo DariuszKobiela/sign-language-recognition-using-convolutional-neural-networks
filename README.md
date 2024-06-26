@@ -43,7 +43,14 @@ The application allow users to select the network, delegate, and number of threa
 ## 3.4. Methods of Network Optimization
 A detailed description of the used optimization methods
 
+### Network quantization
+Network quantization involves reducing the precision of parameters and intermediate activation maps that are typically stored in floating-point notation. Gholami et al. [[3]](#3) indicate that the first step is to define a quantization function that maps the real values of weights or activations to lower precision values. Usually, such a function maps these values to integer values, according to the following formula:
+
+$\sqrt{3x-1}+(1+x)^2$
+
 ## References
 <a id="1">[1]</a> Suharjito, Suharjito & Gunawan, Herman & Thiracitta, Narada & Nugroho, Ariadi. (2018). Sign Language Recognition Using Modified Convolutional Neural Network Model. 1-5. 10.1109/INAPR.2018.8627014. 
 
 <a id="2">[2]</a> Makarov, Ilya & Veldyaykin, Nikolay & Chertkov, Maxim & Pokoev, Aleksei. (2019). American and russian sign language dactyl recognition. PETRA '19: Proceedings of the 12th ACM International Conference on PErvasive Technologies Related to Assistive Environments. 204-210. 10.1145/3316782.3316786. 
+
+<a id="3">[3]</a> Gholami, A., Kim, S., Dong, Z., Yao, Z., Mahoney, M. W., Keutzer, K.: A survey of quantization methods for efficient neural network inference. In arXiv preprint arXiv:2103.13630, 2021. 
