@@ -35,6 +35,39 @@ wrzucić TABELKI 2.1 oraz 2.2 z magisterki (Wykaz modeli realizujących zadania 
 ## 3.2. Model
 [ADD: details of final model - finally consisting of 15 convolutional layers and multiple other types of layers]
 
+|Layer (type)     |            Output Shape        |      Param #   |
+|------------- | ------------- | ------------- |
+|conv2d_40 (Conv2D)      |     (None, 112, 112, 96)  |    11712     |
+|max_pooling2d_22 (MaxPooling) | (None, 56, 56, 96)   |     0       |  
+|conv2d_41 (Conv2D)    |       (None, 56, 56, 128)  |     307328    |
+|conv2d_42 (Conv2D)     |      (None, 56, 56, 128)   |    409728    |
+|max_pooling2d_23 (MaxPooling) | (None, 28, 28, 128)  |     0       |  
+|conv2d_43 (Conv2D)    |       (None, 28, 28, 256)   |    295168   | 
+|conv2d_44 (Conv2D)     |      (None, 28, 28, 256)    |   590080   | 
+|conv2d_45 (Conv2D)      |     (None, 28, 28, 256)   |    590080   | 
+|max_pooling2d_24 (MaxPooling) | (None, 14, 14, 256)  |     0       |  
+|conv2d_46 (Conv2D)     |      (None, 14, 14, 256)   |    590080    |
+|conv2d_47 (Conv2D)    |       (None, 14, 14, 256)   |    590080    |
+|conv2d_48 (Conv2D)     |      (None, 14, 14, 256)   |    590080    |
+|max_pooling2d_25 (MaxPooling) | (None, 7, 7, 256)   |      0       |  
+|conv2d_49 (Conv2D)    |       (None, 7, 7, 512)     |    1180160   |
+|conv2d_50 (Conv2D)    |       (None, 7, 7, 512)     |    2359808   |
+|conv2d_51 (Conv2D)      |     (None, 7, 7, 512)     |    2359808  | 
+|max_pooling2d_26 (MaxPooling) | (None, 4, 4, 512)    |     0      |   
+|conv2d_52 (Conv2D)      |     (None, 4, 4, 1024)    |    4719616  | 
+|conv2d_53 (Conv2D)       |    (None, 4, 4, 1024)    |    9438208   |
+|conv2d_54 (Conv2D)       |    (None, 4, 4, 1024)    |    9438208   |
+|max_pooling2d_27 (MaxPooling) | (None, 2, 2, 1024)   |     0       |  
+|flatten_4 (Flatten)     |     (None, 4096)        |      0         |
+|dense_3 (Dense)         |     (None, 1024)        |      4195328   |
+|dropout_1 (Dropout)    |      (None, 1024)        |      0         |
+|dense_4 (Dense)        |      (None, 37)          |      37925     |
+|------------- | ------------- | ------------- |
+|Total params: |37,703,397| |
+|Trainable params: | 37,703,397 | |
+|Non-trainable params:| 0 | |
+|------------- | ------------- | ------------- |
+
 ## 3.3. Mobile Application Testing the Network
 The application allow users to select the network, delegate, and number of threads for inference. The camera continuously capture frames and provide them to the loaded model. Before delivering frames to the network, the images must be appropriately processed. This process includes segmentation to separate the hand from the background by converting the color space from RGB to HSV, a method that effectively distinguishes skin tones. The segmented image is then converted to grayscale and resized to fit the input layer of the neural network. The installed network makes predictions and provide feedback to the user in the form of text with the percentage prediction result.
 
