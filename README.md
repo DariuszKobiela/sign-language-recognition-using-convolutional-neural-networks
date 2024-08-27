@@ -8,18 +8,60 @@ implementation of the mobile application.
 > Models source code and training scripts: https://github.com/adartemiuk/ASL_recognition_models
 
 ## 2. Background and related work
-[TODO: Dorzucić też podsummowanie przeglądu literatury (na co najmniej 2 strony - streszczenie przeglądu literatury z magisterki)]
 
 ### List of compared models performing gesture recognition tasks: 
 
 | Author  | Model | Gesture type | Sign language type | Accuracy |
 |------------- | ------------- | ------------- |  ------------- |  ------------- | 
 | Suharjito et al. [[1]](#1) | i3D Inception  | dynamic |  Argentinean |  100% |
-| Makarov et al. [[2]](#2) | QuadroConvPoolNet  | static |  American  |  about 100% |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell |
+| Gunawan et al. [2018]              | i3D Inception            | dynamic          | Argentine     | 100%               |
+| Makarov et al. [2019]              | QuadroConvPoolNet        | static           | American      | about 100%         |
+| Bhadra & Kar [2021]                | Custom CNN               | static + dynamic | American      | 99.89%             |
+| Cayamcela & Lim [2019]             | AlexNet                  | static           | American      | 99.39%             |
+| Hasan et al. [2020]                | Custom CNN               | static           | Bengali       | 99.22%             |
+| Kang et al. [2015]                 | CaffeNet                 | static           | American      | 99%                |
+| Tasmere & Ahmed [2020]             | Custom CNN               | static           | Bengali       | 99%                |
+| Le et al. [2020]                   | VGG-19                   | static           | American      | 98.9% (static), 95.8% (real-time) |
+| Hasan et al. [2020]                | Inception V3             | static           | American      | 98.81%             |
+| Mohammed et al. [2019]             | MobileNet                | static           | American      | 98.8%              |
+| Farahanipad et al. [2020]          | Custom CNN               | static           | American      | 98.8%              |
+| Yang & Zhu [2017]                  | Custom CNN               | dynamic          | Chinese       | 99.8%              |
+| Pala et al. [2021]                 | Custom CNN               | static           | American      | 98.5%              |
+| Siriak et al. [2019]               | Custom CNN + LSTM        | dynamic          | Argentine     | 98.46%             |
+| Sun et al. [2018]                  | LeNet-5                  | static           | American      | 98.3%              |
+| Taskiran et al. [2018]             | Custom CNN               | static           | American      | 98.05%             |
+| Mohammed et al. [2019]             | SqueezeNet               | static           | American      | 97.7%              |
+| Ding et al. [2020]                 | AutoML                   | static           | Chinese       | 97.3%              |
+| Rahim et al. [2019a]               | Custom CNN + SVN         | static           | American      | 97.28%             |
+| Nguyen & Do [2019]                 | Custom CNN               | static           | American      | 97.08%             |
+| Rahim et al. [2019b]               | Custom CNN               | static           | American      | 96.96%             |
+| Liu et al. [2019]                  | VGG-16 + SSD             | static           | American      | 96%                |
+| Qianzheng et al. [2021]            | Custom CNN + YOLOv3      | dynamic          | American      | 95.96%             |
+| Cayamcela & Lim [2019]             | GoogLeNet                | static           | American      | 95.52%             |
+| Lu et al. [2019]                   | I3D                      | dynamic          | American      | 95%                |
+| Sayeed et al. [2020]               | Inception V3             | static           | Bengali       | 94.41%             |
+| Das et al. [2020]                  | Custom CNN               | static           | American      | 94.3%              |
+| Malakan & Albaqami [2021]          | Inception V3             | static           | American      | 94%                |
+| Khan et al. [2019]                 | Custom CNN               | static           | Bengali       | 94%                |
+| Zamora-Mora & Chacón-Rivas [2019]  | MobileNet V1             | dynamic          | American      | 85% to 94%         |
+| Lakhotiya et al. [2021]            | Custom CNN               | static           | American      | 93%                |
+| Rao et al. [2018]                  | Custom CNN               | dynamic          | Indian        | 92.88%             |
+| Aich et al. [2020]                 | Custom CNN               | static           | Bengali       | 92.7%              |
+| Park et al. [2020]                 | MobileNet v2 + LSTM      | dynamic          | Korean        | 91.8%              |
+| Bantupalli & Xie [2018]            | Inception V3             | dynamic          | American      | 91%                |
+| Daroya et al. [2018]               | DenseNet-based           | static           | American      | 90.3%              |
+| Sonare et al. [2021]               | Custom CNN + LSTM        | static           | American      | 90.1%              |
+| Makarov et al. [2019]              | LeNet-based              | static           | American      | 90%                |
+| Rafi et al. [2019]                 | VGG-19                   | static           | Bengali       | 89.6%              |
+| Huynh & Ngo [2020]                 | MobileNet + SSD          | static           | Vietnamese    | 88%                |
+| Chavan et al. [2021]               | Custom CNN               | static           | American      | 87.5%              |
+| Hossen et al. [2018]               | VGG-16                   | static           | Bengali       | 84.68%             |
+| Agrawal et al. [2020]              | Inception V3             | static           | American      | 60-80%             |
+| Kurhekar et al. [2019]             | ResNet-34                | static           | American      | 78.5%              |
+| Shurid et al. [2020]               | Custom CNN               | static           | Bengali       | 78%                |
+| Krishnan & Balasubramanian [2019]  | Custom CNN               | static           | English       | 70%                |
+| Agrawal et al. [2020]              | Custom CNN               | static           | American      | 50-60%             |
+| Bantupalli & Xie [2018]            | Inception V3 + LSTM      | dynamic          | American      | 55%                |
 
 One of the most popular sign language datasets, frequently used on the Kaggle platform, is a set of static gestures developed by researchers inspired by the MNIST datasets [44]. It consists of 24 gesture classes representing the letters of the American Sign Language alphabet (A-Z). The dataset does not include classes representing the letters J and Z, as these letters are represented by dynamic gestures. The training set comprises 27,455 samples, while the test set contains 7,172 images. The image dimensions are 28x28 and are represented in grayscale. Another popular set of static gestures from Kaggle is the ASL Alphabet dataset [45]. This collection includes 29 gestures from American Sign Language (26 alphabet gestures) and 3 word gestures ("space," "delete," "nothing"). The training set comprises 87,000 images, while the test set consists of only 29 samples. The Massey dataset, developed by Barczak et al. [2011], is also one of the more popular datasets for training models to recognize static gestures. The latest version of the dataset consists of 2,524 images of American Sign Language gestures. The dataset includes 36 different gestures, representing both the alphabet and numbers. All images are in color, in PNG format, and feature an isolated hand displaying the gesture against a black background. Regarding available dynamic gesture datasets, one of the most frequently used is the Jester dataset, developed by Materzynska et al. [2019]. The dataset consists of 148,092 three-second videos of people performing simple gestures. The dataset includes 5 classes that can be categorized as static gestures and 20 classes representing dynamic gestures. Additionally, there are two classes that indicate no gesture action. The gestures were captured with the help of 1,376 volunteers who performed them in front of a camera. The data is divided into training, test, and validation sets in a ratio of 8:1:1. When splitting the data, care was taken to ensure that videos from a given volunteer did not appear in both the test and training sets. Each video contains 12 frames, and the resolution is 100px. LSA64, prepared by Ronchetti et al. [2016], is a dataset of dynamic gestures from Argentine Sign Language. It consists of 3,200 video clips in which ten volunteers perform five repetitions of each of the 64 most frequently used gestures. The dataset includes 42 gestures performed with one hand and 22 gestures performed with both hands. Each video contains 60 frames, and the resolution is 1920x1080. The WLASL (Word-Level American Sign Language) dataset, created by Li et al. [2020], is one of the largest datasets in terms of the number of words and samples per gesture. The authors divided the dataset into four subsets, each varying in the number of gestures: WLASL100, consisting of about 2,000 videos; WLASL300, containing over 5,000 videos; WLASL1000, with approximately 13,000 samples; and WLASL2000, which contains about 21,000 samples. The dataset was created using educational websites and videos from YouTube. RWTH-BOSTON-400 is a dataset of American Sign Language gestures developed by Zahedi et al. [2005], which is a subset of a larger dataset from Boston University. It contains 843 different sentences, composed of 483 words. The gestures are performed by four different individuals. Other subsets developed by the same institute include RWTH-BOSTON-50, RWTH-BOSTON-104, and RWTH-BOSTON-Hands. All the datasets described above, along with their key features, are summarized in the table below:
 
@@ -29,10 +71,14 @@ One of the most popular sign language datasets, frequently used on the Kaggle pl
 |------------- | ------------- | ------------- |  ------------- |  ------------- | ------------- | 
 | MNIST | Kaggle [44]  | static |  American |  24 | 34,637 |
 | ASL Alphabet |Kaggle [45]  | static |  American  |  29 | 87,029 |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
-| Content Cell  | Content Cell  | Content Cell |  Content Cell |  Content Cell | Content Cell |
+| Massey                     | Massey University, Barczak et al. [2011]          | American Sign Language  | static                      | 36                     | 2,524                 |
+| Jester                     | Materzynska et al. [2019]                         | American Sign Language  | static + dynamic            | 27                     | 148,092               |
+| LSA64                      | Ronchetti et al. [2016]                           | Argentine Sign Language | dynamic                     | 64                     | 3,200                 |
+| WLASL100                   | Li et al. [2020]                                  | American Sign Language  | dynamic                     | 100                    | 2,000                 |
+| WLASL300                   | Li et al. [2020]                                  | American Sign Language  | dynamic                     | 300                    | 5,000                 |
+| WLASL1000                  | Li et al. [2020]                                  | American Sign Language  | dynamic                     | 1,000                  | 13,000                |
+| WLASL2000                  | Li et al. [2020]                                  | American Sign Language  | dynamic                     | 2,000                  | 21,000                |
+| RWTH-BOSTON-400            | Boston University, Zahedi et al. [2005]           | American Sign Language  | dynamic                     | 483                    | 843 sentences         |
 
 ## 3.2. Model
 The network's input consists of one convolutional layer containing 96 filters with dimensions of 11 x 11, which processes images of size 224 x 224 x 1. Additionally, a stride of 2 x 2 is used (which helps reduce the parameters of the initial layers). For each layer of the network, the padding is set to 'same', which does not reduce the dimensions of the image. ReLU is chosen as the activation function and will be applied to each convolutional layer. Following the convolutional layer, a max-pooling layer with dimensions of 2x2, a stride of 2, and padding set to 'same' is added. The model will consistently use this same max-pooling configuration. In the next block, the second and third convolutional layers consist of 128 filters with dimensions of 5x5, followed by a max-pooling layer. The next two blocks of the network feature configurations of three consecutive convolutional layers with 256 filters of 3x3 each, followed by a max-pooling layer. The following block consists of three convolutional layers with 512 filters of 3x3, and a max-pooling layer. The penultimate block consists of three convolutional layers, each with 1024 filters of 3x3, followed by a max-pooling layer. The final block includes a flattening layer, a dense layer with 1024 neurons, a dropout layer with a rate of 0.5, and an output layer with the number of neurons equal to the number of classes (37), with softmax as the activation function.
